@@ -2,17 +2,25 @@
 public class CalcPi {
 	public static void main(String [] args) { 
 	    // Replace this comment with your code
-		int num = Integer.parseInt(args[0]) ;
+		int total = Integer.parseInt(args[0]) ;
+		int counted = 1 ;
+		int start = 3 ; 
 		double negative = 0 ;
 		double positive = 0 ; 
 
-		for (double i = 3.0 ; i <= num ; i += 4.0) {
-			 negative = negative + (1.0 / i) ; }
-		
-		for (double j = 5.0 ; j <= num ; j += 4.0) {
-			 positive = positive + (1.0 / j) ; }
+		while (counted < total) {
+			negative += 1.0 / start ;
+			counted++ ;
+			
+			if (counted >= total) break ; 
+			
+			positive += 1.0 / (start + 2) ;
+			counted++ ;
+			
+			start += 4 ;
+		}
 
 		System.out.println("pi according to Java: " + Math.PI) ; 
-		System.out.println("pi, approximated: " + (1 - negative + positive) * 4);
+		System.out.println("pi, approximated:     " + ((1 - negative + positive) * 4));
 	}
 }
