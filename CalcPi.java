@@ -8,6 +8,12 @@ public class CalcPi {
 		double negative = 0 ;
 		double positive = 0 ; 
 
+		if (total <= 0) {
+			System.out.println("pi according to Java: " + Math.PI);
+   			System.out.println("pi, approximated:     0.0");
+			return;
+		}
+
 		while (counted < total) {
 			negative += 1.0 / start ;
 			counted++ ;
