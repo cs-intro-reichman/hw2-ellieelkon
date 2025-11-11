@@ -2,9 +2,9 @@
 public class CalcPi {
 	public static void main(String [] args) { 
 	    // Replace this comment with your code
-		int total = Integer.parseInt(args[0]) ;
-		int counted = 1 ;
-		int start = 3 ; 
+		double total = Integer.parseInt(args[0]) ;
+		double counted = 1 ;
+		double start = 3 ; 
 		double negative = 0 ;
 		double positive = 0 ; 
 
